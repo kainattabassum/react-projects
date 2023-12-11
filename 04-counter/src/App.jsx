@@ -1,11 +1,26 @@
+import { useState } from 'react'
+
 function App() {
+  const [count, setCount] = useState(0)
+
+  const addValue = () => {
+    console.log("value : ", count);
+    if(count < 20) {
+      setCount(count + 1)
+    }
+  }
+  const removeValue = () => {
+    if(count > 0) {
+      setCount(count - 1)
+    }
+  }
   return (
     <div>
-      <h1>Counter Project of React</h1>
-      <h2>Count Value : 5</h2>
+      <h1>Counter Project</h1>
+      <h2>Count Value : {count}</h2>
 
-      <button>ADD</button>
-      <button>REMOVE</button>
+      <button className={`${count == 20 && 'disabled'}`} onClick={addValue}>ADD VALUE {count}</button>
+      <button className={`${count == 0 && 'disabled'}`} onClick={removeValue}>REMOVE VALUE {count}</button>
     </div>
   )
 }

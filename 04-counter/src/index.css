@@ -5,3 +5,19 @@ body {
     color: #f5f5f5;
     font-family: 'Montserrat', sans-serif;
 }
+
+button {
+    background: transparent;
+    border: 1.5px solid white;
+    padding: 10px 15px;
+    margin: 6px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 160px; 
+}
+
+.disabled {
+    opacity: .6;
+    cursor: none;
+}
