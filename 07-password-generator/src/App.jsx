@@ -26,7 +26,7 @@ function App() {
 
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select()
-    passwordRef.current?.setSelectionRange(0, 6)
+    // passwordRef.current?.setSelectionRange(0, 6)
     window.navigator.clipboard.writeText(password)
   }, [password]);
 
@@ -34,7 +34,7 @@ function App() {
     passwordGenerator();
   }, [length, isNumber, isChar, passwordGenerator]);
 
-  retur
+  return (
     <div className="w-full max-w-lg mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-900 text-orange-500">
       <h1 className="text-white text-center my-3">Password Generator</h1>
       <div className="flex shadow rounded-lg overflow-hidden mb-4">
