@@ -11,3 +11,5 @@
 2. State Management ( by default don't have ) e.g. Redux, Redux toolkit, Zustand, Context API
 3. Class base component ( legacy code )
 4. BAAS (Backend As A Service) e.g. firebase, ecommerce app, social media apps
+
+### CDN
