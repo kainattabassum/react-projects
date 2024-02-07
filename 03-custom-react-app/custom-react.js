@@ -2,6 +2,8 @@ customRendering = (createReactElement, container) => {
     /*
         const domElement = document.createElement(createReactElement.type)
         domElement.innerHTML = createReactElement.children
+        
+        // problem when user have multiple attributes 
         domElement.setAttribute('href', createReactElement.props.href)
         domElement.setAttribute('target', createReactElement.props.target)
 
