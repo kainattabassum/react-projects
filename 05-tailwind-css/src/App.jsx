@@ -11,9 +11,11 @@ function App() {
       <h1 className="bg-green-400 text-black font-bold p-4 rounded-xl mb-4">
         Tailwind CSS
       </h1>
-      <Card username="channel" btnTxt="click here" />
-      <Card username="kainat" btnTxt="visit profile" />
-      <Card username="tabassum" />
+      <div className="relative flex flex-wrap -mx-2">
+        <Card username="channel" btnTxt="click here" />
+        <Card username="kainat" btnTxt="visit profile" />
+        <Card username="tabassum" />
+      </div>
     </div>
   );
 }
