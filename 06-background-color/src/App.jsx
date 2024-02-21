@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./components/Button";
 
 function App() {
   const [color, setColor] = useState("gray");
@@ -7,27 +8,24 @@ function App() {
     <div className="w-full h-screen" style={{ backgroundColor: color }}>
       <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2">
         <div className="flex flex-wrap justify-center gap-2 shadow-lg bg-white px-3 py-2 rounded-3xl">
-          <button
+          <Button
             className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
             style={{ backgroundColor: "red" }}
-            onClick={() => setColor("red")}
-          >
-            Red
-          </button>
-          <button
+            handleClick={() => setColor("red")}
+            text="Red"
+          />
+          <Button
             className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
             style={{ backgroundColor: "green" }}
-            onClick={() => setColor("green")}
-          >
-            Green
-          </button>
-          <button
+            handleClick={() => setColor("green")}
+            text="Green"
+          />
+          <Button
             className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
             style={{ backgroundColor: "blue" }}
-            onClick={() => setColor("blue")}
-          >
-            Blue
-          </button>
+            handleClick={() => setColor("blue")}
+            text="Blue"
+          />
         </div>
       </div>
     </div>
