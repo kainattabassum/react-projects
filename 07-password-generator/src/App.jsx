@@ -9,6 +9,7 @@ function App() {
 
   const passwordRef = useRef(null);
 
+  // FOR OPTIMIZATION > useCallback()
   const passwordGenerator = useCallback(() => {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -25,9 +26,9 @@ function App() {
   }, [length, isNumber, isChar, setPassword]);
 
   const copyPasswordToClipboard = useCallback(() => {
-    passwordRef.current?.select()
+    passwordRef.current?.select();
     // passwordRef.current?.setSelectionRange(0, 6)
-    window.navigator.clipboard.writeText(password)
+    window.navigator.clipboard.writeText(password);
   }, [password]);
 
   useEffect(() => {
