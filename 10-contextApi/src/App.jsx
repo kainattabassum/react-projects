@@ -1,5 +1,17 @@
+import React from "react";
+import UserContextProvider from "./context/UserContextProvider";
+import Login from "./ components/Login";
+import Profile from "./ components/Profile";
+
 function App() {
-  return <h1>App</h1>;
+  return (
+    <UserContextProvider>
+      <h1>App</h1>
+
+      <Login />
+      <Profile />
+    </UserContextProvider>
+  );
 }
 
 export default App;
