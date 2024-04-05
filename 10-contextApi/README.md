@@ -4,7 +4,8 @@ Context provides a way to pass data through the component tree without having to
 
 React Context consists of three main parts:
 
-1. Context Object: This is created using _React.createContext()_. It returns an object with two components: _Provider_ and _Consumer_.
+1. Context Object: This is created using _React.createContext()_.
+   - It returns an object with two components: _Provider_ and _Consumer_.
 2. Provider: The _Provider_ component is used to wrap the parent component(s) that want to share data. It accepts a _value_ prop that will be passed down to the _Consumer_ components.
 3. Consumer: The _Consumer_ component is used to consume the data provided by the _Provider_. It allows components to subscribe to the context changes and access the context data.
 
@@ -88,4 +89,4 @@ export default Content;
 
 In this example, we have created a ThemeContext and provided a ThemeProvider in the App component. The Header and Content components consume the theme value using the ThemeConsumer component.
 
-*Context provides a way to avoid prop drilling, especially when dealing with deeply nested components that need access to shared data. However, it's important to use it judiciously and avoid overusing it for every piece of shared data in your application, as it can make the code harder to understand and maintain.*
+_Context provides a way to avoid prop drilling, especially when dealing with deeply nested components that need access to shared data. However, it's important to use it judiciously and avoid overusing it for every piece of shared data in your application, as it can make the code harder to understand and maintain._
