@@ -19,7 +19,7 @@ function App() {
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 
-  const toggleTodo = (id) => {
+  const toggleComplete = (id) => {
     setTodos((prev) =>
       prev.map((prevTodo) =>
         prevTodo.id === id
@@ -30,6 +30,7 @@ function App() {
   };
 
   useEffect(() => {
+    // console.log(JSON.parse(localStorage.getItem("todos")));
     const todos = JSON.parse(localStorage.getItem("todos"));
     if (todos && todos.length > 0) {
       setTodos(todos);
@@ -42,7 +43,7 @@ function App() {
 
   return (
     <TodoContextProvider
-      value={{ todos, addTodo, updateTodo, deleteTodo, toggleTodo }}
+      value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}
     >
       <div className="bg-[#172842] min-h-screen py-8">
         <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
@@ -50,9 +51,11 @@ function App() {
             Manage Your Todos
           </h1>
           <div className="mb-4">
+            {/* todo form goes here */}
             <TodoForm />
           </div>
           <div className="flex flex-wrap gap-y-3">
+            {/* todo inut item goes here */}
             {todos.map((todo) => (
               <div key={todo.id} className="w-full">
                 <TodoItem todo={todo} />
