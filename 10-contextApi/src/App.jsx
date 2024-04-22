@@ -1,7 +1,6 @@
 import React from "react";
 import UserContextProvider from "./context/UserContextProvider";
-import Login from "./ components/Login";
-import Profile from "./ components/Profile";
+import { Login, Profile } from "./components";
 
 function App() {
   return (
